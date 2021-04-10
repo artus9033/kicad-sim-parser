@@ -41,3 +41,31 @@ Example usage:
 ```sh-session
 $ kicad-sim-parser -i simulation.csv -o probedResults.csv
 ```
+
+# Probed frequencies
+
+Currently the probed frequencies are:
+
+```
+10kHz
+20kHz
+40kHz
+60kHz
+80kHz
+100kHz
+200kHz
+400kHz
+600kHz
+800kHz
+1000kHz
+2000kHz
+4000kHz
+6000kHz
+8000kHz
+10000kHz
+20000kHz
+40000kHz
+60000kHz
+80000kHz
+100000kHz
+```
