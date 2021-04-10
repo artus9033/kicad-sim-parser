@@ -7,8 +7,13 @@ A simple KiCad Spice frequency simulation parser &amp; prober
 [![Downloads/week](https://img.shields.io/npm/dw/kicad-sim-parser.svg)](https://npmjs.org/package/kicad-sim-parser)
 [![License](https://img.shields.io/npm/l/kicad-sim-parser.svg)](https://github.com/artus9033/kicad-sim-parser/blob/master/package.json)
 
+# Table of Contents
+
+-   [kicad-sim-parser](#kicad-sim-parser)
+-   [Table of Contents](#table-of-contents)
+-   [Installation](#installation)
 -   [Usage](#usage)
--   [Commands](#commands)
+-   [Probed frequencies](#probed-frequencies)
 
 # Installation
 
