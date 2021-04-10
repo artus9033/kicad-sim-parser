@@ -1,0 +1,45 @@
+name: CLI Release
+
+on:
+    create:
+        tags:
+            - v*
+
+jobs:
+    release:
+        runs-on: ubuntu-latest
+
+        strategy:
+            matrix:
+                node-version: [14.15.3]
+
+        steps:
+            - uses: actions/checkout@v2
+
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v2
+              with:
+                  node-version: ${{ matrix.node-version }}
+
+            - name: Install NPM dependencies
+              run: npm install
+
+            - name: Package for all platforms
+              run: npm run build
+
+            - name: Get package version
+              id: package-version
+              uses: martinbeentjes/npm-get-version-action@master
+
+            - uses: "marvinpinto/action-automatic-releases@latest"
+              with:
+                  title: ${{ steps.package-version.outputs.current-version}}
+                  automatic_release_tag: "latest"
+                  repo_token: "${{ secrets.GITHUB_TOKEN }}"
+                  prerelease: false
+                  files: |
+                      dist/kicad-sim-parser-linux
+                      dist/kicad-sim-parser-macos
+                      dist/kicad-sim-parser-win.exe
+              env:
+                  CI: true

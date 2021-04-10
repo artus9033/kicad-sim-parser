@@ -11,8 +11,8 @@
 		"@oclif/dev-cli": "^1.26.0",
 		"@types/node": "^10.17.56",
 		"cross-env": "^7.0.3",
+		"pkg": "^4.4.9",
 		"rimraf": "^3.0.2",
-		"run-script-os": "^1.1.6",
 		"ts-node": "^8.10.2",
 		"typescript": "^3.9.9"
 	},
@@ -37,10 +37,7 @@
 		"prepack": "rimraf lib && tsc -b && oclif-dev readme",
 		"version": "oclif-dev readme && git add README.md",
 		"dev": "cross-env ./bin/run kiparser --in in.csv --out out.csv",
-		"pack": "run-script-os",
-		"pack:windows": "oclif-dev pack:win",
-		"pack:macos": "oclif-dev pack:macos",
-		"pack:linux": "oclif-dev pack:deb"
+		"build": "npm run prepack && rimraf dist && pkg . --out-path ./dist"
 	},
 	"types": "lib/index.d.ts",
 	"dependencies": {
@@ -50,5 +47,8 @@
 		"compute-logspace": "^1.0.0",
 		"lodash": "^4.17.21",
 		"tslib": "^1.14.1"
+	},
+	"pkg": {
+		"scripts": "./lib/**/*.js"
 	}
 }
