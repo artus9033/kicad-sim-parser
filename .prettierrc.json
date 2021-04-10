@@ -1,0 +1,13 @@
+{
+	"printWidth": 100,
+	"useTabs": true,
+	"semi": true,
+	"tabWidth": 4,
+	"trailingComma": "none",
+	"importSort": {
+		".js, .jsx, .ts, .tsx": {
+			"style": "module",
+			"parser": "typescript"
+		}
+	}
+}
