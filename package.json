@@ -1,7 +1,7 @@
 {
 	"name": "kicad-sim-parser",
 	"description": "A simple KiCad Spice frequency simulation parser & prober",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"author": "artus9033 @artus9033",
 	"bin": {
 		"kicad-sim-parser": "./bin/run"
@@ -34,9 +34,9 @@
 	},
 	"repository": "artus9033/kicad-sim-parser",
 	"scripts": {
-		"prepack": "rimraf lib && tsc -b && oclif-dev readme",
-		"version": "oclif-dev readme && git add README.md",
-		"dev": "cross-env ./bin/run kiparser --in in.csv --out out.csv",
+		"prepack": "rimraf lib && tsc -b",
+		"version": "git add README.md",
+		"dev": "cross-env ./bin/run kicad-sim-parser --in in.csv --out out.csv",
 		"build": "npm run prepack && rimraf dist && pkg . --out-path ./dist"
 	},
 	"types": "lib/index.d.ts",

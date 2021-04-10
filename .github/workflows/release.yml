@@ -1,4 +1,4 @@
-name: CLI Release
+name: Release CLI binaries
 
 on:
     create:
@@ -14,7 +14,8 @@ jobs:
                 node-version: [14.15.3]
 
         steps:
-            - uses: actions/checkout@v2
+            - name: GIT checkout
+              uses: actions/checkout@v2
 
             - name: Use Node.js ${{ matrix.node-version }}
               uses: actions/setup-node@v2
@@ -31,7 +32,8 @@ jobs:
               id: package-version
               uses: martinbeentjes/npm-get-version-action@master
 
-            - uses: "marvinpinto/action-automatic-releases@latest"
+            - name: Upload build artifacts
+              uses: "marvinpinto/action-automatic-releases@latest"
               with:
                   title: ${{ steps.package-version.outputs.current-version}}
                   automatic_release_tag: "latest"
