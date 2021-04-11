@@ -9,18 +9,24 @@ A simple KiCad Spice frequency simulation parser &amp; prober
 
 # Table of Contents
 
--   [kicad-sim-parser](#kicad-sim-parser)
--   [Table of Contents](#table-of-contents)
--   [Installation](#installation)
--   [Usage](#usage)
--   [Probed frequencies](#probed-frequencies)
+- [kicad-sim-parser](#kicad-sim-parser)
+- [Table of Contents](#table-of-contents)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Probed frequencies](#probed-frequencies)
 
 # Installation
 
-You can download automatically precompiled release binaries from the [releases page](https://github.com/artus9033/kicad-sim-parser/releases) or install manually from NPM:
+You can download automatically precompiled binaries from the [releases page](https://github.com/artus9033/kicad-sim-parser/releases) or install straight from NPM:
 
 ```sh-session
 $ npm install -g kicad-sim-parser
+```
+
+or simply run it from npx which will install it automatically:
+
+```sh-session
+npx kicad-sim-parser -i ...
 ```
 
 # Usage
