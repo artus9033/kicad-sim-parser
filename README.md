@@ -9,11 +9,11 @@ A simple KiCad Spice frequency simulation parser &amp; prober
 
 # Table of Contents
 
-- [kicad-sim-parser](#kicad-sim-parser)
-- [Table of Contents](#table-of-contents)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Probed frequencies](#probed-frequencies)
+-   [kicad-sim-parser](#kicad-sim-parser)
+-   [Table of Contents](#table-of-contents)
+-   [Installation](#installation)
+-   [Usage](#usage)
+-   [Probed frequencies](#probed-frequencies)
 
 # Installation
 
@@ -58,6 +58,11 @@ $ kicad-sim-parser -i simulation.csv -o probedResults.csv
 Currently the probed frequencies are:
 
 ```
+1kHz
+2kHz
+4kHz
+6kHz
+8kHz
 10kHz
 20kHz
 40kHz

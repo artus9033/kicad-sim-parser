@@ -4,6 +4,11 @@ import * as path from "path";
 import { Command, flags } from "@oclif/command";
 
 const kHzFreqs: number[] = [
+	1,
+	2,
+	4,
+	6,
+	8,
 	10,
 	20,
 	40,
