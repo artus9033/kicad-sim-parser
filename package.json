@@ -1,7 +1,7 @@
 {
 	"name": "kicad-sim-parser",
 	"description": "A simple KiCad Spice frequency simulation parser & prober",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"author": "artus9033 @artus9033",
 	"bin": {
 		"kicad-sim-parser": "./bin/runProd"
