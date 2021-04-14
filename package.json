@@ -4,7 +4,7 @@
 	"version": "1.0.1",
 	"author": "artus9033 @artus9033",
 	"bin": {
-		"kicad-sim-parser": "./bin/run"
+		"kicad-sim-parser": "./bin/runProd"
 	},
 	"bugs": "https://github.com/artus9033/kicad-sim-parser/issues",
 	"devDependencies": {
@@ -36,8 +36,8 @@
 	"scripts": {
 		"prepack": "rimraf lib && tsc -b",
 		"version": "git add README.md",
-		"dev": "cross-env ./bin/run --in in.csv --out out.csv",
-		"build": "npm run prepack && rimraf dist && pkg . --out-path ./dist"
+		"dev": "cross-env ./bin/runDev --in in.csv --out out.csv",
+		"build": "npm run prepack && rimraf dist && pkg . --out-path ./dist --target win32"
 	},
 	"types": "lib/index.d.ts",
 	"dependencies": {
