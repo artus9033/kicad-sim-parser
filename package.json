@@ -37,7 +37,7 @@
 		"prepack": "rimraf lib && tsc -b",
 		"version": "git add README.md",
 		"dev": "cross-env ./bin/runDev --in in.csv --out out.csv",
-		"build": "npm run prepack && rimraf dist && pkg . --out-path ./dist --target win32"
+		"build": "npm run prepack && rimraf dist && pkg . --out-path ./dist"
 	},
 	"types": "lib/index.d.ts",
 	"dependencies": {
